@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href = "static/bootstrap.min.css" rel = "stylesheet" media =  "screen" >
+  </head>
+  <body>
+    <div class="container">
+      <h1>Admin Page</h2>
+      {% for msg in get_flashed_messages() %}
+        {{msg}}
+      {% endfor %}
+      <p>click <a href = "/logout" >here</a> to logout. </p>
+      
+    </div>
+  </body>
+</html>
