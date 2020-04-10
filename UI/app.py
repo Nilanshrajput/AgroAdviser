@@ -37,7 +37,6 @@ def welcome():
     return render_template("welcome_page.html")
 
 @app.route("/login" , methods = ['GET','POST'])
-
 def login():
     error = None
     if request.method == 'POST':
