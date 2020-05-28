@@ -1,0 +1,23 @@
+name: CI
+
+on: [pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup python
+      uses: actions/setup-python@v1
+      with:
+        python-version: '>=3.6'
+    
+    - name: Install test dependencies
+      run: |
+        pip install pytest pytest-black>=0.3.8
+        echo test dependencies successfully installed.
+#    - name: Running tests
+#      run: |
+#        python -m pytest --black --verbose
